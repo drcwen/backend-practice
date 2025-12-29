@@ -28,4 +28,25 @@ const deleteUser = async (req, res) => {
     }
 }
 
-module.exports = { createUser, getAllUser, deleteUser }
+const loginUser = async (req, res) => {
+
+    const {username, password} = req.body;
+    try {
+        const loginUser = await myUser.findOne({ username });
+        
+        if(!loginUser) {
+            res.status(400).json({ error: err.message });
+        }
+        
+        if(password === loginUser.password) {
+            return res.status(200).json({ message: "Successfully login"});
+        } else {
+            return res.status(400).json({ message: "Incorrect password"});
+        }
+        
+    } catch(err) {
+        res.status(400).json({ error: err.message});
+    }
+}
+
+module.exports = { createUser, getAllUser, deleteUser, loginUser }
