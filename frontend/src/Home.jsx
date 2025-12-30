@@ -1,6 +1,8 @@
 
 
 import React, { useState } from "react";
+import Card from './Card';
+import NotesPage from './NotesPage'
 
 const Home = () => {
 
@@ -52,23 +54,10 @@ const Home = () => {
                 <h1 className='text-4xl'>Hello, Queen Yasmin!</h1>
 
                 {/*Cards Section*/}
-                <div className='bg-red-200 flex flex-row flex-wrap gap-5'>
+                <div className='bg-white flex flex-row flex-wrap gap-5 m-5'>
 
                     {/*Card*/}
-                    <div className='w-auto h-auto bg-red-500 rounded-lg'>
-
-                        <div className='m-5 flex flex-col gap-5'>
-                            <h1
-                                className='text-xl'>My First Note</h1>
-
-                            <p 
-                                className='text-base'>
-                                This is my first note
-                            </p>
-
-                        </div>
-                    </div>
-                    
+                        <NotesPage/>
                 </div>
             </div>
             

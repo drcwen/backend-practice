@@ -8,7 +8,7 @@ const { createNote, getAllNote, deleteNote, updateNote } = require('../controlle
 //Create new note
 router.post('/create', createNote)
 
-router.get('/', getAllNote)
+router.get('/all', getAllNote)
 
 router.delete('/:id', deleteNote)
 
