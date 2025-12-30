@@ -6,10 +6,10 @@ const Home = () => {
 
     
     return(
-        <div className='w-full h-screen flex flex-row'>
+        <div className="w-full h-screen flex bg-[url('')] bg-cover bg-center">
             
             {/* Sidebar */}
-            <div className="h-screen w-auto bg-[url('https://t3.ftcdn.net/jpg/03/22/30/46/360_F_322304683_7ysRarFkmy2osfPKTOYQv7qTPofKelfb.jpg')] bg-cover bg-center rounded-tr-3xl rounded-br-3xl ">
+            <div className="h-screen w-72 bg-[url('https://t3.ftcdn.net/jpg/03/22/30/46/360_F_322304683_7ysRarFkmy2osfPKTOYQv7qTPofKelfb.jpg')] bg-cover bg-center rounded-tr-3xl rounded-br-3xl ">
                 
                 {/* Sidebar Contents */}
                 <div className='m-10 flex flex-col gap-5'>
@@ -46,6 +46,31 @@ const Home = () => {
                 </div>
             </div>
 
+            {/*Notes Screen*/}
+            <div className='w-auto h-auto flex flex-1 flex-col m-10 gap-5'>
+                
+                <h1 className='text-4xl'>Hello, Queen Yasmin!</h1>
+
+                {/*Cards Section*/}
+                <div className='bg-red-200 flex flex-row flex-wrap gap-5'>
+
+                    {/*Card*/}
+                    <div className='w-auto h-auto bg-red-500 rounded-lg'>
+
+                        <div className='m-5 flex flex-col gap-5'>
+                            <h1
+                                className='text-xl'>My First Note</h1>
+
+                            <p 
+                                className='text-base'>
+                                This is my first note
+                            </p>
+
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
             
         </div>
     )
