@@ -7,7 +7,6 @@ import SignUp from './SignUp'
 import Home from './Home'
 import Responsive from './Responsive'
 import Apparel from './Apparel'
-import Card from './Card'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Apparel />
